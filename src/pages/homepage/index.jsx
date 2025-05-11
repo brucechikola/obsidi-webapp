@@ -13,17 +13,17 @@ import SatisfiedPartners from './components/satisfiedPartners';
 export default function HomePage() {
   return (
     <main className="w-full min-h-screen">
-      {/* <Nav/> */}
-      {/* <Hero/> */}
-      {/* <TrustedCompanies/> */}
-      {/* <WhyPartner/> */}
-      {/* <AdditionalTalentSolutions/> */}
-      {/* <PlatformPerformance/> */}
-      {/* <Pricing/> */}
-      {/* <SatisfiedPartners/> */}
-      {/* <GetSuccess/> */}
+      <Nav/>
+      <Hero/>
+      <TrustedCompanies/>
+      <WhyPartner/>
+      <AdditionalTalentSolutions/>
+      <PlatformPerformance/>
+      <Pricing/>
+      <SatisfiedPartners/>
+      <GetSuccess/>
       <GetStarted/>
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   );
 }
