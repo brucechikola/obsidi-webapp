@@ -13,7 +13,6 @@ import SatisfiedPartners from './components/satisfiedPartners';
 export default function HomePage() {
   return (
     <main className="w-full min-h-screen">
-      <Nav/>
       <Hero/>
       <TrustedCompanies/>
       <WhyPartner/>
@@ -23,7 +22,6 @@ export default function HomePage() {
       <SatisfiedPartners/>
       <GetSuccess/>
       <GetStarted/>
-      <Footer/>
     </main>
   );
 }

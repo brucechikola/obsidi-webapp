@@ -8,6 +8,8 @@ import {
 } from "react-router";
 
 import "../src/css/app.css";
+import Nav from './components/nav';
+import Footer from './components/footer';
 
 
 
@@ -21,7 +23,9 @@ export function Layout({ children }) {
         <Links />
       </head>
       <body>
+        <Nav/>
         {children}
+        <Footer/>
         <ScrollRestoration />
         <Scripts />
       </body>
