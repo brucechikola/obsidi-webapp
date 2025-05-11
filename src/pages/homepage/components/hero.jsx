@@ -26,7 +26,7 @@ const ShapeComponent = ({className, children, ...rest}) =>{
 
 export default function Hero() {
   return (
-    <div className="w-[90%] mx-auto min-h-[calc(100dvh-(100px))] grid md:grid-cols-2 lg:grid-cols-2 gap-x-13">
+    <div className="w-[90%] mx-auto min-h-[750px] h-[calc(100dvh-(100px))] grid md:grid-cols-2 lg:grid-cols-2 gap-x-13">
         {/* left side of the content */}
         <div className="w-full h-full flex items-start justify-center flex-col">
             <h1 className="font-semibold text-[60px] lg:text-[90px] leading-[80px] lg:leading-[110px] mt-5 lg:mt-30 bg-gradient-to-r from-slate-700 via-blue-900 to-black/80 bg-clip-text text-transparent animate-pulse">
