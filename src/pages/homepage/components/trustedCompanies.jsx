@@ -16,10 +16,10 @@ export default function TrustedCompanies() {
         <h5 className="text-center mb-5 text-slate-600 font-light">Trusted By:</h5>
 
         <div className="flex animate-infinite-scroll1">
-            {[...trustedCompanies.first_line, ...trustedCompanies.first_line, ...trustedCompanies.first_line].map((text, index) => <CompanyItem key={index} index={index} logo={text}/>)}
+            {[...trustedCompanies.first_line, ...trustedCompanies.first_line].map((text, index) => <CompanyItem key={index} index={index} logo={text}/>)}
         </div>
         <div className="flex animate-infinite-scroll2 mt-5">
-            {[...trustedCompanies.second_line, ...trustedCompanies.second_line, ...trustedCompanies.second_line].map((text, index) => <CompanyItem key={index} index={index} logo={text}/>)}
+            {[...trustedCompanies.second_line, ...trustedCompanies.second_line].map((text, index) => <CompanyItem key={index} index={index} logo={text}/>)}
         </div>
     </div>
   )
