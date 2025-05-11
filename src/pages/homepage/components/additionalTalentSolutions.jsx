@@ -5,10 +5,16 @@ import career from '../../../assets/images/career.png';
 
 import { FaChevronRight } from "react-icons/fa6";
 import talentbg from '../../../assets/images/talentbg.svg';
+import { motion } from "framer-motion";
 
 const Card = ({title, message, image}) =>{
     return (
-        <div className="w-full h-[376px] bg-white rounded-xl p-4 border border-[#e7e6ec] shadow-md relative">
+        <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className="w-full h-[376px] bg-white rounded-xl p-4 border border-[#e7e6ec] shadow-md relative">
             <img src={image} alt="" className="w-full h-[180px] bg-blue-900 rounded-xl object-cover" />
             <h5 className="my-3">{title}</h5>
             <p className="text-[14px] text-gray-500 text-light">{message}</p>
@@ -16,7 +22,7 @@ const Card = ({title, message, image}) =>{
                 Learn More
                 {/* <FaChevronRight className="ml-2" /> */}
             </a>
-        </div>
+        </motion.div>
     )
 }
 export default function AdditionalTalentSolutions() {

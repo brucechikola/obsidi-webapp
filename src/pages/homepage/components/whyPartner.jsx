@@ -1,10 +1,16 @@
 import React from 'react'
 import colchart from '../../../assets/images/colchart.png';
 import nonrebbon from '../../../assets/images/nonrebbon.png';
+import { motion } from "framer-motion";
 
 const Card = ({icon, title, message}) =>{
     return (
-        <div className="w-full h-full rounded-xl grid grid-cols-7 border border-[#d1d1da] p-4">
+        <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className="w-full h-full rounded-xl grid grid-cols-7 border border-[#d1d1da] p-4">
             <div className="w-[48px] h-[48px] bg-[#f5f5fb] rounded-full flex items-center justify-center border border-[#dfd2f8]">
                 <img src={icon} className="w-[24px] h-[24px] object-contain" alt="" />
             </div>
@@ -12,7 +18,7 @@ const Card = ({icon, title, message}) =>{
                 <h4 className="font-semibold">{title}</h4>
                 <p className="text-[13px] text-slate-500 mt-2"> {message} </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

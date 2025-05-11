@@ -4,12 +4,16 @@ import woman from '../../../assets/images/woman.png';
 import handshake from '../../../assets/images/handshake.png';
 import meeting from '../../../assets/images/meeting.png';
 import meeting2 from '../../../assets/images/meeting2.png';
-
+import { motion } from "framer-motion";
 
 // class to render shape component
 const ShapeComponent = ({className, children, ...rest}) =>{
     return (
-        <div className={`group w-full h-full flex items-center justify-center col-span-${rest?.colspan || 1} ${rest?.position || ''} transition-transform duration-500 hover:scale-105 hove:opacity-[0.3]`}>
+        <motion.div 
+            // initial={{ opacity: 0, y: 500 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 2 }}
+            className={`group w-full h-full flex items-center justify-center col-span-${rest?.colspan || 1} ${rest?.position || ''} transition-transform duration-500 hover:scale-105 hove:opacity-[0.3]`}>
             <div className={`w-full h-full overflow-hidden ${className && className} relative`}>
                 {rest?.image && <>
                     <img src={rest?.image} className="w-full h-full object-cover transition-transform duration-500 delay-200 group-hover:scale-110" alt="" />
@@ -17,7 +21,7 @@ const ShapeComponent = ({className, children, ...rest}) =>{
                 </>}
             </div>
             {children && children }
-        </div>
+        </motion.div>
     )
 }
 

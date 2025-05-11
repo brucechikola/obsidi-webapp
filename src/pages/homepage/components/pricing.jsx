@@ -7,7 +7,7 @@ import { LuCheck } from "react-icons/lu";
 
 
 // function to create pricing card
-const Card = ({content, index}) =>{
+const Card = ({content}) =>{
     const [pricing, setPricing] = useState({monthly:content.monthly, annually:content.annually, active:"annually"})
 
     // function to toggle pricing(updating the state)
@@ -62,7 +62,7 @@ export default function Pricing() {
           </p>
           <div className="w-[75%] h-[545px] grid grid-cols-3 gap-x-8 mt-5">
             {
-              pricing?.map((card,idx)=><Card content={card} index={idx} />)
+              pricing?.map((card,index)=><Card key={index} content={card} />)
             }
             
           </div>
