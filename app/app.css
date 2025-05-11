@@ -8,8 +8,28 @@
 html,
 body {
   @apply bg-white dark:bg-gray-950;
+  @apply bg-white;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+  @media (prefers-color-scheme: light) {
+    color-scheme: light;
+  }
+
+  
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
+
+.animate-infinite-scroll1 {
+  animation: scroll 5s linear infinite;
+}
+.animate-infinite-scroll2 {
+  animation: scroll 3.5s linear infinite;
+}
+
